@@ -3,12 +3,14 @@ from django.http import *
 from django.views.decorators.csrf import csrf_exempt
 from cms_put.models import *
 
+
 # Create your views here.
-@csrf_exempt #SE UTILIZA PARA QUE NOS PERMITA REALIZAR EL POST
+@csrf_exempt  #SE UTILIZA PARA QUE NOS PERMITA REALIZAR EL POST
 def main(request):
     if request.method == 'GET':
         htmlAnswer = "<form id='paginas' method='POST'>" \
-            + "<label> Introduce el recurso y el contenido del recurso</br></label>" \
+            + "<label> Introduce el recurso y el contenido del recurso" \
+            + "</br></label>" \
             + "<input name='name' type='text'>" \
             + "<br>" \
             + "<textarea name='page' rows='20' cols='100' ></textarea>" \
